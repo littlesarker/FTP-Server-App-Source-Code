@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="5dp"
+
+    android:weightSum="2"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:src="@drawable/intheme"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+
+        <Button
+
+            android:id="@+id/eng"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:background="@drawable/round_shape"
+            android:onClick="Eng"
+            android:text="English"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Button
+
+            android:id="@+id/hind"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_toRightOf="@id/eng"
+            android:background="@drawable/round_shape"
+            android:onClick="Hind"
+            android:text="Hindi"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Button
+
+            android:id="@+id/ani"
+            android:layout_width="139dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/eng"
+            android:layout_marginBottom="136dp"
+            android:onClick="ani"
+            android:text="Animation"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+
+            android:layout_width="fill_parent"
+            android:layout_height="90dp"
+            android:layout_below="@id/hind"
+            android:layout_marginTop="44dp"
+            android:layout_toRightOf="@id/ani"
+            android:onClick="tvWeb"
+            android:text="Tv &amp; Webseries"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ani"
+            tools:ignore="HardcodedText" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</LinearLayout>
